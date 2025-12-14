@@ -31,11 +31,33 @@
                 </div>
             </section>
 
+            <section class="stats-section" id="statsSection" style="display: none;">
+                <h2>Statistical Analysis</h2>
+                <div id="statsContainer"></div>
+            </section>
+
+            <section class="charts-section" id="chartsSection2" style="display: none;">
+                <div class="chart-container full-width">
+                    <h2>Dual-Axis Comparison</h2>
+                    <p class="chart-description">Coffee prices (left axis) vs Developer activity (right axis)</p>
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </section>
+
+            <section class="charts-section" id="chartsSection3" style="display: none;">
+                <div class="chart-container full-width">
+                    <h2>Normalized Comparison (0-100 Scale)</h2>
+                    <p class="chart-description">Both datasets normalized to 0-100 scale for direct pattern comparison</p>
+                    <canvas id="normalizedChart"></canvas>
+                </div>
+            </section>
+
             <section class="insights-section" id="insightsSection" style="display: none;">
-                <h2>Observed Trends</h2>
+                <h2>Observed Trends & Insights</h2>
                 <div class="insights-content">
                     <p>Both datasets show interesting temporal patterns. Coffee prices and developer activity demonstrate similar seasonal patterns with peaks in mid-year and troughs at the beginning and end of the year.</p>
-                    <p>While these datasets are completely unrelated in causation, the temporal alignment reveals an intriguing coincidence. This visualization serves as a reminder that correlation does not imply causation, and that temporal patterns can emerge independently across disparate domains.</p>
+                    <p>The dual-axis comparison chart reveals how both metrics move over time, while the normalized comparison shows the underlying pattern similarities when scaled to the same range.</p>
+                    <p>The statistical analysis panel provides detailed metrics including minimum, maximum, average values, and trend direction for each dataset. The correlation coefficient indicates the strength and direction of the relationship between the two variables.</p>
                     <p><strong>Note:</strong> This dashboard fetches real data from public APIs. The relationship between coffee prices and developer productivity is purely coincidental and should not be interpreted as evidence of any causal relationship.</p>
                 </div>
             </section>
