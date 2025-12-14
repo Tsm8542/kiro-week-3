@@ -1,0 +1,40 @@
+{
+  "projectName": "Coffee Prices vs Developer Productivity Dashboard",
+  "description": "A static data mashup dashboard visualizing the relationship between global coffee prices and developer productivity signals, fetching real-time data from public APIs",
+  "functionalRequirements": [
+    "Display line chart of monthly coffee prices over time",
+    "Display line chart of monthly developer activity over time",
+    "Align both charts to the same time axis",
+    "Display static text summary of observed trends",
+    "Load data from public APIs via fetch() API",
+    "Handle API failures gracefully with error messages",
+    "Provide mock data fallback when APIs are unavailable"
+  ],
+  "nonFunctionalRequirements": [
+    "Fully static HTML/CSS/JavaScript with no backend",
+    "Responsive layout for desktop, tablet, and mobile",
+    "No build process required for running the dashboard",
+    "Compatible with GitHub Pages hosting",
+    "Chart rendering using Chart.js via CDN",
+    "No user inputs, filters, buttons, or controls",
+    "Comprehensive test coverage with unit and property-based tests",
+    "Retry logic with exponential backoff for failed API calls"
+  ],
+  "constraints": [
+    "Must use only HTML5, CSS3, and vanilla JavaScript",
+    "Must use Chart.js library from CDN",
+    "Data must be fetched from public APIs",
+    "No backend server required",
+    "Must be deployable to GitHub Pages",
+    "Testing framework (Vitest) required for development"
+  ],
+  "assumptions": [
+    "Public APIs are accessible and return valid data",
+    "Browser supports ES6 JavaScript",
+    "Browser supports fetch() API",
+    "Chart.js CDN is accessible",
+    "API responses contain valid JSON with expected structure",
+    "Mock data is used when APIs fail",
+    "Node.js is available for running tests during development"
+  ]
+}

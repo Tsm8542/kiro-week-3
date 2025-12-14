@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.charts-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.chart-container {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-container canvas {
+    max-height: 400px;
+}
+
+.insights-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.insights-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.insights-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.insights-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.insights-content strong {
+    color: #2c3e50;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+.error-container {
+    background: #fee;
+    border: 2px solid #f88;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #c33;
+    font-weight: 500;
+}
+
+.loading-container {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .charts-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .chart-container {
+        padding: 20px;
+    }
+
+    .chart-container h2 {
+        font-size: 1.1rem;
+    }
+
+    .insights-section {
+        padding: 20px;
+    }
+
+    .insights-section h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    header {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .charts-section {
+        gap: 15px;
+    }
+
+    .chart-container {
+        padding: 15px;
+    }
+
+    .chart-container h2 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .chart-container canvas {
+        max-height: 300px;
+    }
+
+    .insights-section {
+        padding: 15px;
+    }
+
+    .insights-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .insights-content p {
+        font-size: 0.95rem;
+    }
+
+    main {
+        gap: 20px;
+    }
+}

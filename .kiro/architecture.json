@@ -1,0 +1,89 @@
+{
+  "architecture": "Static Single Page Application (SPA)",
+  "components": {
+    "index.html": {
+      "role": "Entry point and DOM structure",
+      "responsibilities": [
+        "Define page structure with header, main content, and footer",
+        "Provide canvas elements for chart rendering",
+        "Include insight summary section",
+        "Load Chart.js from CDN",
+        "Load application scripts"
+      ]
+    },
+    "styles.css": {
+      "role": "Styling and responsive layout",
+      "responsibilities": [
+        "Define responsive grid layout for charts",
+        "Implement mobile-first design approach",
+        "Style typography and spacing",
+        "Handle viewport breakpoints for tablet and mobile"
+      ]
+    },
+    "app.js": {
+      "role": "Data loading and orchestration",
+      "responsibilities": [
+        "Fetch coffee_prices.json and developer_activity.json",
+        "Merge datasets to align common date range",
+        "Initialize dashboard on DOM ready",
+        "Coordinate data flow to chart rendering"
+      ]
+    },
+    "charts.js": {
+      "role": "Chart rendering and configuration",
+      "responsibilities": [
+        "Generate Chart.js configuration objects",
+        "Render coffee price line chart",
+        "Render developer activity line chart",
+        "Handle chart styling and labels"
+      ]
+    },
+    "api.js": {
+      "role": "API data fetching and validation",
+      "responsibilities": [
+        "Fetch coffee prices from API Ninjas Commodities API",
+        "Fetch developer activity from GitHub API",
+        "Implement retry logic with exponential backoff",
+        "Validate data format and structure",
+        "Generate mock data as fallback when APIs fail"
+      ]
+    },
+    "tests/": {
+      "role": "Test suite for quality assurance",
+      "responsibilities": [
+        "Unit tests for API fetching and validation",
+        "Unit tests for data merging logic",
+        "Property-based tests for universal properties",
+        "Integration tests for chart rendering"
+      ]
+    }
+  },
+  "dataFlow": {
+    "step1": "User opens index.html in browser",
+    "step2": "HTML loads Chart.js from CDN",
+    "step3": "HTML loads app.js (which imports api.js and charts.js)",
+    "step4": "app.js DOMContentLoaded event triggers initializeDashboard()",
+    "step5": "loadData() calls fetchCoffeePrices() and fetchDeveloperActivity()",
+    "step6": "API calls fetch data from public APIs with retry logic",
+    "step7": "If APIs fail, mock data is generated as fallback",
+    "step8": "Data is validated using validateCoffeePriceData() and validateDeveloperActivityData()",
+    "step9": "mergeDatasets() aligns data to common date range",
+    "step10": "renderCoffeeChart() and renderProductivityChart() create Chart.js instances",
+    "step11": "Charts render in canvas elements with aligned timelines",
+    "step12": "UI state transitions from loading to charts display"
+  },
+  "chartRenderingPipeline": {
+    "input": "Merged dataset with dates, coffee prices, and productivity counts",
+    "processing": [
+      "getChartConfig() generates Chart.js configuration",
+      "Configuration includes data, styling, and axis labels",
+      "Chart.js library renders canvas visualization"
+    ],
+    "output": "Interactive line charts displayed in browser"
+  },
+  "responsiveDesign": {
+    "desktop": "Charts displayed side-by-side in 2-column grid",
+    "tablet": "Charts stack vertically with adjusted spacing",
+    "mobile": "Single column layout with optimized font sizes and padding"
+  }
+}

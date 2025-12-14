@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Prices vs Developer Productivity Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coffee Prices vs Developer Productivity</h1>
+            <p class="subtitle">A Static Data Mashup Dashboard</p>
+        </header>
+
+        <main>
+            <div id="errorContainer" class="error-container" style="display: none;"></div>
+            <div id="loadingContainer" class="loading-container">
+                <p>Loading data from APIs...</p>
+            </div>
+
+            <section class="charts-section" id="chartsSection" style="display: none;">
+                <div class="chart-container">
+                    <h2>Global Coffee Prices</h2>
+                    <canvas id="coffeeChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Developer Activity Volume</h2>
+                    <canvas id="productivityChart"></canvas>
+                </div>
+            </section>
+
+            <section class="insights-section" id="insightsSection" style="display: none;">
+                <h2>Observed Trends</h2>
+                <div class="insights-content">
+                    <p>Both datasets show interesting temporal patterns. Coffee prices and developer activity demonstrate similar seasonal patterns with peaks in mid-year and troughs at the beginning and end of the year.</p>
+                    <p>While these datasets are completely unrelated in causation, the temporal alignment reveals an intriguing coincidence. This visualization serves as a reminder that correlation does not imply causation, and that temporal patterns can emerge independently across disparate domains.</p>
+                    <p><strong>Note:</strong> This dashboard fetches real data from public APIs. The relationship between coffee prices and developer productivity is purely coincidental and should not be interpreted as evidence of any causal relationship.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Coffee Prices vs Developer Productivity Dashboard. Data fetched from public APIs.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
